@@ -4,7 +4,7 @@
 一个使用 **HTML、CSS、原生 JavaScript** 开发的前端数据分析项目，可在浏览器本地完成用户反馈的情感判断、主题归类、指标统计、筛选和 CSV 导出。
 # 在线体验
 
-GitHub Pages：项目地址
+GitHub Pages：[项目地址](https://siyu4751-prog.github.io/trendlens-feedback/)
 
 # 项目截图
 
