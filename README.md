@@ -2,7 +2,13 @@
 # TrendLens 用户反馈智能分析看板
 
 一个使用 **HTML、CSS、原生 JavaScript** 开发的前端数据分析项目，可在浏览器本地完成用户反馈的情感判断、主题归类、指标统计、筛选和 CSV 导出。
+# 在线体验
 
+GitHub Pages：项目地址
+
+# 项目截图
+
+![TrendLens Dashboard](docs/screens.png)
 # 功能
 
 多行文本批量分析 CSV 文件导入
@@ -34,10 +40,6 @@ trendlens-feedback-lab/
    └─ sample-feedback.csv
 ```
 
-# 简历描述
-
-**TrendLens 用户反馈智能分析看板｜前端开发**  
-使用 HTML、CSS、JavaScript 开发响应式反馈分析工具，实现 CSV 导入、规则化情感评分、多主题识别、可视化统计、筛选与结果导出；通过本地存储保存分析状态，并根据负向主题自动生成运营建议。
 
 # 可继续升级
 
