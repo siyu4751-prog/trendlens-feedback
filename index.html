@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="TrendLens 用户反馈智能分析看板">
+  <title>TrendLens 用户反馈分析</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span>TL</span><b>TrendLens</b></div>
+  <button id="themeBtn" class="ghost">切换主题</button>
+</header>
+<main>
+  <section class="hero">
+    <div><p class="eyebrow">WEB × NLP × DATA OPERATIONS</p><h1>把杂乱评论变成产品洞察</h1><p>输入或导入用户反馈，在浏览器本地完成情感分析、主题识别、数据筛选和结果导出。</p></div>
+    <div class="hero-card"><b>0</b><span>无需 API Key</span></div>
+  </section>
+
+  <section class="grid two">
+    <article class="panel">
+      <div class="heading"><div><small>01 / INPUT</small><h2>导入反馈</h2></div><button id="sampleBtn">加载示例</button></div>
+      <label for="feedbackInput">每行一条反馈</label>
+      <textarea id="feedbackInput" placeholder="页面很流畅，搜索功能也很好用&#10;价格太贵了，希望增加学生优惠"></textarea>
+      <div class="file-row"><input id="csvInput" type="file" accept=".csv"><span>支持 feedback、comment、content、text 列</span></div>
+      <div class="actions"><button id="analyzeBtn" class="primary">开始分析</button><button id="clearBtn" class="ghost">清空</button></div>
+      <p id="message" class="message"></p>
+    </article>
+
+    <article class="panel">
+      <div class="heading"><div><small>02 / OVERVIEW</small><h2>数据概览</h2></div><span id="analysisTime">尚未分析</span></div>
+      <div class="metrics">
+        <div><span>反馈总数</span><b id="totalMetric">0</b></div>
+        <div class="good"><span>正向占比</span><b id="positiveMetric">0%</b></div>
+        <div class="bad"><span>负向占比</span><b id="negativeMetric">0%</b></div>
+        <div><span>重点主题</span><b id="topicMetric">—</b></div>
+      </div>
+      <div class="charts"><div><h3>情感分布</h3><div id="sentimentChart" class="chart empty">分析后显示</div></div><div><h3>主题分布</h3><div id="topicChart" class="chart empty">分析后显示</div></div></div>
+    </article>
+  </section>
+
+  <section class="panel section-gap">
+    <div class="heading"><div><small>03 / INSIGHTS</small><h2>自动洞察与运营建议</h2></div><span>规则引擎生成</span></div>
+    <div id="insights" class="insights"><div class="insight"><small>等待分析</small><h3>系统将自动识别关键问题</h3><p>加载示例或输入真实反馈即可生成结论。</p></div></div>
+  </section>
+
+  <section class="panel section-gap">
+    <div class="heading wrap"><div><small>04 / RESULTS</small><h2>反馈明细</h2></div><div class="filters"><select id="sentimentFilter"><option value="all">全部情感</option><option value="positive">正向</option><option value="neutral">中性</option><option value="negative">负向</option></select><input id="searchInput" placeholder="搜索关键词"><button id="exportBtn">导出 CSV</button></div></div>
+    <div class="table-wrap"><table><thead><tr><th>#</th><th>反馈内容</th><th>情感</th><th>主题</th><th>得分</th></tr></thead><tbody id="resultBody"><tr><td colspan="5" class="empty-cell">暂无结果</td></tr></tbody></table></div>
+  </section>
+
+  <section class="about"><p class="eyebrow">ABOUT</p><h2>项目亮点</h2><div class="grid three"><article><b>01</b><h3>前端工程</h3><p>响应式布局、文件读取、本地存储和 CSV 导出。</p></article><article><b>02</b><h3>轻量 NLP</h3><p>使用可解释的关键词词典完成情感评分与主题识别。</p></article><article><b>03</b><h3>运营思维</h3><p>把用户声音转化为指标、风险提示和行动建议。</p></article></div></section>
+</main>
+<footer>TrendLens · HTML + CSS + Vanilla JavaScript</footer>
+<script src="script.js"></script>
+</body>
+</html>
